@@ -63,7 +63,7 @@ main {
     overflow-wrap: break-word;
     overflow-x: hidden;
     background: white;
-    padding: 20px;
+    padding: 20px 2rem;
     height: 40vh;
     width: 100%;
     color: var(--taxt);
@@ -71,13 +71,11 @@ main {
 }
 
 .textField::-webkit-scrollbar {
-    height: 10px;
-    width: 10px;
+    width: 8px;
 }
 
 .textField::-webkit-scrollbar-track {
     border-radius: 20px;
-    border: 1px solid gray;
 }
 
 .textField::-webkit-scrollbar-thumb {

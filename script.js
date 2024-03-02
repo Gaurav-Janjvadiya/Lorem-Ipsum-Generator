@@ -31,8 +31,31 @@ vals[2].addEventListener("click", () => {
         swich = 1;
     }
 })
+
+//text generate functionalities
+const tags = ["H1", "H2", "H3", "H4", "H5", "H6", "P", "UL", "OL"];
+tags.forEach(tag => select.innerHTML += `<option value="${tag}">${tag}</option>`);
+
+let selectedTag = "";
 let para = "";
 let finalPara = "";
+
+select.addEventListener("input", (e) => {
+    selectedTag = e.target.value;
+    finalPara = "";
+})
+
+
+const forHtags = (i) => {
+    if (selectedTag == tags[i]) {
+        finalPara += `<${tags[i]}>${para}</${tags[i]}><br>`;
+    }
+}
+const forListTags = (i) => {
+    if (selectedTag == tags[i]) {
+        finalPara += `<li>${para}</li>`;
+    }
+}
 
 btn.addEventListener("click", () => {
     for (let j = 0; j < Number(vals[0].textContent); j++) {
@@ -40,10 +63,28 @@ btn.addEventListener("click", () => {
             para += string[i] + " ";
         }
         if (vals[2].innerHTML == "X") {
-            finalPara += `<p>${para}</p><br>`;
-        } else if (0) {}
+            finalPara += `${para}<br>`;
+        }
+        forHtags(0);
+        forHtags(1);
+        forHtags(2);
+        forHtags(3);
+        forHtags(4);
+        forHtags(5);
+        forHtags(6);
+        forListTags(7);
+        forListTags(8);
         para = "";
     }
-    textField.innerHTML = finalPara;
+    if (selectedTag == tags[8]) {
+        textField.innerHTML = `<ol>${finalPara}</ol>`;
+    }
+    else if (selectedTag == tags[7]) {
+        textField.innerHTML = `<ul>${finalPara}</ul>`;
+    } else {
+        textField.innerHTML = finalPara;
+    }
     finalPara = "";
 })
+
+
