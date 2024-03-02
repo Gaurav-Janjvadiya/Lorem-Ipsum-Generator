@@ -1,40 +1,47 @@
-:root{
+:root {
     --bg: #FE9900;
     --taxt: #00382B;
 }
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: poppins;
 }
 
-html,body{
+html,
+body {
     background-color: var(--bg);
     color: var(--taxt);
     height: 100vh;
     width: 100%;
 }
 
-main{
+main {
     width: 80%;
 }
+
 /* comman styles */
 
-button,.vals{
+button,
+.vals {
     all: initial;
     font-family: poppins;
 }
 
-body,main,header,.selectField,.vals,.item,.htdiv{
+body,
+main,
+header,
+.val,
+.item {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
 }
 
-header{
+header {
     position: absolute;
     top: 0;
     height: 4rem;
@@ -44,15 +51,15 @@ header{
     border-bottom: 1px solid var(--taxt);
 }
 
-main{
-    padding: 1rem;
+main {
+    margin-top: 1rem;
 }
 
-.textField{
+.textField {
     font-family: poppins;
-    word-wrap:break-word;
-    overflow-wrap:break-word;
-    overflow: scroll;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    overflow-x: hidden;
     background: white;
     padding: 20px;
     height: 40vh;
@@ -60,12 +67,32 @@ main{
     border-radius: 10px;
 }
 
-.textField::-webkit-scrollbar{
-    display: none;
-    appearance: none;
+/* width */
+.textField::-webkit-scrollbar {
+    height: 10px;
+    width: 10px;
 }
 
-button{
+/* Track */
+.textField::-webkit-scrollbar-track {
+    border-radius: 20px;
+    border: 1px solid gray;
+}
+
+/* Handle */
+.textField::-webkit-scrollbar-thumb {
+    border-radius: 20px;
+    background-color: var(--taxt);
+    /* border: 1px solid gray; */
+}
+
+/* Handle on hover */
+.textField::-webkit-scrollbar-thumb:hover {
+    background: #014837;
+}
+
+
+button {
     margin-top: 10px;
     padding: .7rem .8rem;
     background: var(--taxt);
@@ -73,54 +100,48 @@ button{
     border-radius: 1rem;
     cursor: pointer;
 }
-button:active,button:hover{
+
+button:active,
+button:hover {
     background: #014837;
 }
 
-.container{
+.container {
+    padding: 10px;
+    margin-top: 10px;
+    border: 1px solid black;
+    height: fit-content;
     width: 100%;
     display: grid;
     grid-template-columns: 50% 50%;
-    margin-top: 10px;
-}   
-
-
-.selectField{
-    justify-content: start;
-    flex-direction: row;
-    width: 50%;
+    grid-template-rows: 5rem 5rem;
 }
 
-.vals{
-    border-radius: 3px;
-    background: white;
-    padding: 2px;
+.item {
+    border: 1px solid gray;
+    background-color: #ffffff98;
+    padding: 1rem;
+}
+
+.item>p {
     color: var(--taxt);
-    margin-left: 10px;
+}
+
+.item:nth-child(1),
+.item:nth-child(2){
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.val {
     height: 20px;
     width: 20px;
-}
-
-.rangeDiv{
-    width: 50%;
+    background-color: white;
+    border-radius: 3px;
 }
 
 input[type=range]{
-    margin: 2px;
-    width: 80%;
+    margin-top: 1rem;
+    width: 110%;
 }
 
-.htdiv{
-    justify-content: space-evenly;
-    flex-direction: row;
-    width: 75%;
-}
-
-.htInner{
-    display: flex;
-    align-items: center;
-}
-
-select{
-    width: 30%;
-}
