@@ -1,0 +1,126 @@
+:root{
+    --bg: #FE9900;
+    --taxt: #00382B;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: poppins;
+}
+
+html,body{
+    background-color: var(--bg);
+    color: var(--taxt);
+    height: 100vh;
+    width: 100%;
+}
+
+main{
+    width: 80%;
+}
+/* comman styles */
+
+button,.vals{
+    all: initial;
+    font-family: poppins;
+}
+
+body,main,header,.selectField,.vals,.item,.htdiv{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+header{
+    position: absolute;
+    top: 0;
+    height: 4rem;
+    width: 100%;
+    font-size: 2rem;
+    font-weight: 600;
+    border-bottom: 1px solid var(--taxt);
+}
+
+main{
+    padding: 1rem;
+}
+
+.textField{
+    font-family: poppins;
+    word-wrap:break-word;
+    overflow-wrap:break-word;
+    overflow: scroll;
+    background: white;
+    padding: 20px;
+    height: 40vh;
+    width: 100%;
+    border-radius: 10px;
+}
+
+.textField::-webkit-scrollbar{
+    display: none;
+    appearance: none;
+}
+
+button{
+    margin-top: 10px;
+    padding: .7rem .8rem;
+    background: var(--taxt);
+    color: white;
+    border-radius: 1rem;
+    cursor: pointer;
+}
+button:active,button:hover{
+    background: #014837;
+}
+
+.container{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    margin-top: 10px;
+}   
+
+
+.selectField{
+    justify-content: start;
+    flex-direction: row;
+    width: 50%;
+}
+
+.vals{
+    border-radius: 3px;
+    background: white;
+    padding: 2px;
+    color: var(--taxt);
+    margin-left: 10px;
+    height: 20px;
+    width: 20px;
+}
+
+.rangeDiv{
+    width: 50%;
+}
+
+input[type=range]{
+    margin: 2px;
+    width: 80%;
+}
+
+.htdiv{
+    justify-content: space-evenly;
+    flex-direction: row;
+    width: 75%;
+}
+
+.htInner{
+    display: flex;
+    align-items: center;
+}
+
+select{
+    width: 30%;
+}
