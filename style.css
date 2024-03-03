@@ -187,6 +187,10 @@ select {
         width: 90%;
     }
 
+    span{
+        right: 1.5rem;
+    }
+
     span:hover {
         opacity: 0.5;
     }
