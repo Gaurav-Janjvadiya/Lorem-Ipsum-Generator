@@ -130,4 +130,7 @@ button:hover,button:active{
         left: auto;
         right: 10px;
     }
+    .inItem{
+        grid-template-columns: 80% auto;
+    }
 }
