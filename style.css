@@ -97,6 +97,7 @@ main{
 }
 
 select{
+    display: none;
     outline: none;
     font-size: large;
     border: none;
