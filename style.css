@@ -210,5 +210,8 @@ select {
         display: grid;
         grid-template-columns: 80% 20%;
     }
+    input[type=range] {
+        margin-top: 10px;
+    }
 
 }
