@@ -86,7 +86,7 @@ btn.addEventListener("click", () => {
         textField.innerHTML = finalPara;
         console.log(3)
     }
-    finalPara = ""; 
+    finalPara = "";
 })
 
 
