@@ -6,6 +6,7 @@ const range = [...document.querySelectorAll(".range")];
 const items = [...document.querySelectorAll(".item")];
 const select = document.querySelector("select");
 const btn = document.querySelector("button");
+const span = [...document.querySelectorAll("span")];
 
 range.forEach(item => {
     item.addEventListener("input", (e) => {
@@ -23,10 +24,10 @@ let swich = 0;
 vals[2].addEventListener("click", () => {
     if (swich) {
         select.style.display = "none";
-        vals[2].innerHTML = "X";
+        vals[2].innerHTML = "";
         swich = 0;
     } else {
-        vals[2].innerHTML = '<span class="material-symbols-outlined">check</span>'
+        vals[2].innerHTML = '✔️'
         select.style.display = "flex";
         swich = 1;
     }
@@ -77,16 +78,20 @@ btn.addEventListener("click", () => {
     }
     if (selectedTag == tags[8]) {
         textField.innerHTML = `<ol>${finalPara}</ol>`;
-        console.log(1);
     }
     else if (selectedTag == tags[7]) {
         textField.innerHTML = `<ul>${finalPara}</ul>`;
-        console.log(2);
     } else {
         textField.innerHTML = finalPara;
-        console.log(3)
     }
     finalPara = "";
 })
 
+span[0].addEventListener("click", () => {
+    window.navigator.clipboard.writeText(textField.textContent);
+    textField.classList.add('selected');
+    setTimeout(() => {
+        textField.classList.remove('selected');
+    }, 1000);
+})
 
