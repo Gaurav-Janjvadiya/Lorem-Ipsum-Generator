@@ -55,6 +55,7 @@ header {
 main {
     height: fit-content;
     margin-top: 4rem;
+    position: relative;
 }
 
 .textField {
@@ -87,6 +88,19 @@ main {
     background: #014837;
 }
 
+span{
+    top: 0;
+    right: 0;
+    padding: .5rem;
+    position: absolute;
+    cursor: pointer;
+    opacity: .5;
+    color: var(--taxt);
+}
+
+span:hover{
+    opacity: 1;
+}
 
 button {
     margin-top: 10px;
