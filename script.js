@@ -36,15 +36,14 @@ vals[2].addEventListener("click", () => {
 const tags = ["H1", "H2", "H3", "H4", "H5", "H6", "P", "UL", "OL"];
 tags.forEach(tag => select.innerHTML += `<option value="${tag}">${tag}</option>`);
 
-let selectedTag = "";
+let selectedTag = null;
 let para = "";
 let finalPara = "";
 
 select.addEventListener("input", (e) => {
     selectedTag = e.target.value;
-    finalPara = "";
+    textField.innerHTML = "";
 })
-
 
 const forHtags = (i) => {
     if (selectedTag == tags[i]) {
@@ -62,7 +61,7 @@ btn.addEventListener("click", () => {
         for (let i = 0; i < Number(vals[1].textContent); i++) {
             para += string[i] + " ";
         }
-        if (vals[2].innerHTML == "X") {
+        if (selectedTag === null) {
             finalPara += `${para}<br>`;
         }
         forHtags(0);
@@ -78,13 +77,16 @@ btn.addEventListener("click", () => {
     }
     if (selectedTag == tags[8]) {
         textField.innerHTML = `<ol>${finalPara}</ol>`;
+        console.log(1);
     }
     else if (selectedTag == tags[7]) {
         textField.innerHTML = `<ul>${finalPara}</ul>`;
+        console.log(2);
     } else {
         textField.innerHTML = finalPara;
+        console.log(3)
     }
-    finalPara = "";
+    finalPara = ""; 
 })
 
 
