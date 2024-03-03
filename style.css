@@ -20,6 +20,7 @@ body {
     width: 100%;
     position: relative;
 }
+
 /* comman styles */
 
 button,
@@ -50,8 +51,8 @@ main {
     padding: 1rem;
     height: fit-content;
     position: relative;
-    width: 100%;
-    height:fit-content;
+    width: 80%;
+    height: fit-content;
 }
 
 .textField {
@@ -119,7 +120,7 @@ button:hover {
 
 .container {
     margin-top: 10px;
-    height: fit-content;
+    height: 30vh ;
     width: 85%;
     display: grid;
     grid-template-columns: 50% 50%;
@@ -171,16 +172,45 @@ select {
     border-radius: 10px;
 }
 
-.item:nth-child(4),.item:nth-child(3) {
+.item:nth-child(4),
+.item:nth-child(3) {
     display: grid;
     grid-template-columns: 50% 20%;
 }
 
 @media (max-width:600px) {
     main {
-        padding: 2px;
         width: 100%;
-        top: 1rem;
+    }
+
+    .textField {
+        height: 30vh;
+        width: 90%;
+    }
+
+    span:hover {
+        opacity: 0.5;
+    }
+
+    span:active {
+        opacity: 1;
+    }
+
+    button:hover {
+        background: var(--taxt);
+    }
+
+    .container {
+        height: 50vh;
+        grid-template-columns: 90%;
+        grid-template-rows:max-content;
+    }
+    /* .item:nth-child(2),
+    .item:nth-child(4), */
+    .item:nth-child(1n) {
+        display: grid;
+        grid-template-columns: 80% 20%;
+        background-color: #ffffff98;
     }
 
 }
