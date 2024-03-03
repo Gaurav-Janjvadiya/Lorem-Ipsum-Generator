@@ -92,6 +92,6 @@ span[0].addEventListener("click", () => {
     textField.classList.add('selected');
     setTimeout(() => {
         textField.classList.remove('selected');
-    }, 1000);
+    }, 600);
 })
 
