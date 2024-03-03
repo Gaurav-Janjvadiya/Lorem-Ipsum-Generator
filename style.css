@@ -209,7 +209,6 @@ select {
     .item:nth-child(1n) {
         display: grid;
         grid-template-columns: 80% 20%;
-        background-color: #ffffff98;
     }
 
 }
