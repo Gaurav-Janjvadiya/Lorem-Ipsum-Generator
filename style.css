@@ -40,7 +40,7 @@ main{
 
 .textField{
     margin: 10px;
-    padding: 10px;
+    padding:10px 10px 10px 2rem  ;
     word-wrap: break-word;
     overflow-x:hidden;
     border-radius: 6px;
@@ -63,8 +63,19 @@ main{
     padding: 10px;
     margin: 10px;
     display: grid;
-    grid-template-rows: 25% 25% 20% 15% 15%;
-    border: 1px solid black;
+    grid-template-rows: 25% 25% 15% 15% auto;
+    font-size: large;
+    font-weight: 500;
+}
+
+.item{
+    padding: 30px 10px;
+    display: grid;
+}
+
+.inItem{
+    display: grid;
+    grid-template-columns: 50% auto;
 }
 
 .container > span{
@@ -72,6 +83,41 @@ main{
     padding: 10px;
     top: 10px;
     left: 46vw;
+    cursor: pointer;
+}
+
+.box{
+    height: 30px;
+    width: 30px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%; 
+}
+
+select{
+    outline: none;
+    font-size: large;
+    border: none;
+    border-radius: 10px;
+}
+
+button{
+    font-size: large;
+    background-color: var(--taxt);
+    color: white;
+    outline: none;
+    border: none;
+    height: 50%;
+    border-radius: 10px;
+}
+
+button:hover,button:active{
+    background-color:#035e49;
+}
+
+.three{
     cursor: pointer;
 }
 

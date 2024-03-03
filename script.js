@@ -24,7 +24,7 @@ let swich = 0;
 vals[2].addEventListener("click", () => {
     if (swich) {
         select.style.display = "none";
-        vals[2].innerHTML = "";
+        vals[2].innerHTML = "❌";
         swich = 0;
     } else {
         vals[2].innerHTML = '✔️'
