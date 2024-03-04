@@ -140,11 +140,4 @@ button:active {
     .inItem {
         grid-template-columns: 80% auto;
     }
-    .textField{
-        margin: 0px;
-    }
-    .container{
-        margin: 0;
-        padding: 0;
-    }
 }
